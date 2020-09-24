@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+body{
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.image{
+  background-image: url(https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/bg-masthead.jpg);
+  height: 1000px;
+  width: 100vw; 
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-position: center;
+  /* background-attachment: fixed; */
+  /* background-size: contain; */
+  /* background-repeat:no-repeat; */
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.image h1 {
+  position: relative;
+  font-size: 100px;
+  background: rgb(0,0,0);
+background: linear-gradient(33deg, rgba(0,0,0,1) 0%, rgba(194,194,194,1) 42%, rgba(129,129,129,1) 100%);
+  /* background:linear-gradient(rgba(139, 136, 136, 0.9), rgba(255, 255, 255, 0)); */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text; 
+} 
+p{
+  position:relative;
+  bottom: 75px;
+  width: 300px;
+  font-size: 16px;
+  text-align: center;
+  color:  rgb(114, 114, 114);
 }
 
-.App-link {
-  color: #61dafb;
-}
+.main-button{
+  height: 70px;
+  width: 200px;
+  position: relative;
+  cursor:pointer;
+  border-radius: 5px;
+  background-color: rgb(79, 128, 123);
+  border: none;
+  color:#fff;
+  text-align:center;
+  font-size: 16px;
 
-@keyframes App-logo-spin {
+}
+.demo-cont{
+  width: 100vw;
+  height: 1000px;
+  position:relative;
+  background:rgb(15, 15, 15);
+  
+}
+.animate-button-on-demand-spin {
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
   from {
-    transform: rotate(0deg);
+      transform: rotate(Odeg);
   }
   to {
-    transform: rotate(360deg);
+      transform: rotate(1440deg);
+  }
+}
+
+@media (max-width: 993px) {
+  .image h1{
+    font-size: 75px;
+  }
+  p{
+    font-size: 13px;
+    bottom: 40px;
+    width: 240px;
+  }
+  .main-button{
+    height: 63px;
+    width: 180px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image h1{
+    font-size: 60px;
+  }
+  p{
+    font-size: 10px;
+    bottom: 40px;
+    width: 200px;
+  }
+  .main-button{
+    height: 49px;
+    width: 140px;
+    font-size: 10px;
   }
 }
